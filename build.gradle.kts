@@ -9,7 +9,7 @@ maven{
 }
 
 dependencies {
-    compile(Libs.tasks)
+    compile("com.atlassian.performance.tools:jvm-tasks:0.0.1")
     compile(Libs.kotlinStandard)
     testCompile(Libs.junit)
     testCompile(Libs.hamcrest)
