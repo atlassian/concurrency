@@ -46,9 +46,30 @@ maven {
     version = scmVersion.version
 }
 
+val sourcesJar by tasks.creating(Jar::class) {
+    classifier = "sources"
+    from(java.sourceSets["main"].allSource)
+}
+
 publishing {
-    publications.create("mavenJava", MavenPublication::class.java) {
-        artifact(tasks["jar"])
+    val publication = publications.create("mavenJava", MavenPublication::class.java) {
+        pom {
+            scm {
+                url.set("https://bitbucket.org/atlassian/concurrency")
+                connection.set("scm:git:git@bitbucket.org:atlassian/concurrency.git")
+                developerConnection.set("scm:git:git@bitbucket.org:atlassian/concurrency.git")
+            }
+        }
+    }
+    val jar by tasks.getting(Jar::class) {
+        into("META-INF/maven/${project.group}/${project.name}") {
+            rename(".*", "pom.xml")
+            from(tasks.withType(GenerateMavenPom::class.java).single())
+        }
+    }
+    publication.apply {
+        artifact(jar)
+        artifact(sourcesJar)
     }
     if (scmVersion.version.endsWith("SNAPSHOT")) {
         repositories.add(project.repositories["atlassian-private-snapshot"])
