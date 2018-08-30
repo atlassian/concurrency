@@ -2,11 +2,17 @@ val kotlinVersion = "1.2.30"
 
 plugins {
     kotlin("jvm").version("1.2.30")
-    id("com.atlassian.performance.tools.gradle-release").version("0.0.2")
+    id("com.atlassian.performance.tools.gradle-release").version("0.3.0")
+}
+
+configurations.all {
+    resolutionStrategy {
+        failOnVersionConflict()
+    }
 }
 
 dependencies {
-    compile("com.atlassian.performance.tools:jvm-tasks:0.0.1")
+    compile("com.atlassian.performance.tools:jvm-tasks:[1.0.0,2.0.0)")
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
     log4j(
         "api",

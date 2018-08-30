@@ -1,6 +1,6 @@
 package com.atlassian.performance.tools.concurrency
 
-import com.atlassian.performance.tools.jvmtasks.TaskTimer
+import com.atlassian.performance.tools.jvmtasks.api.TaskTimer
 import org.apache.logging.log4j.CloseableThreadContext
 import org.apache.logging.log4j.ThreadContext
 import java.util.concurrent.CompletableFuture
