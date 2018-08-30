@@ -1,6 +1,6 @@
-package com.atlassian.performance.tools.concurrency
+package com.atlassian.performance.tools.concurrency.api
 
-import com.atlassian.performance.tools.concurrency.TraceableTask
+import com.atlassian.performance.tools.concurrency.api.TraceableTask
 import org.hamcrest.Matchers.equalTo
 import org.junit.Assert.assertThat
 import org.junit.Test

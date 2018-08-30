@@ -1,4 +1,4 @@
-package com.atlassian.performance.tools.concurrency
+package com.atlassian.performance.tools.concurrency.api
 
 import com.atlassian.performance.tools.jvmtasks.api.TaskTimer
 import org.apache.logging.log4j.CloseableThreadContext
@@ -7,6 +7,9 @@ import java.util.concurrent.CompletableFuture
 import java.util.concurrent.ExecutorService
 import java.util.function.Supplier
 
+/**
+ * Embeds the [label]led [task] within the current log context.
+ */
 fun <T> ExecutorService.submitWithLogContext(
     label: String,
     task: () -> T

@@ -1,4 +1,4 @@
-package com.atlassian.performance.tools.concurrency
+package com.atlassian.performance.tools.concurrency.api
 
 import org.apache.logging.log4j.Logger
 import java.io.InterruptedIOException
@@ -24,6 +24,9 @@ fun <T> Future<T>.finishBy(
     return result
 }
 
+/**
+ * @return True if [this] was directly or indirectly caused by an interrupt.
+ */
 fun Throwable.representsInterrupt(): Boolean = when {
     this is InterruptedException || this is InterruptedIOException -> true
     else -> cause?.representsInterrupt() ?: false
