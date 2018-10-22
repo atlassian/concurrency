@@ -7,6 +7,7 @@ plugins {
 
 configurations.all {
     resolutionStrategy {
+        activateDependencyLocking()
         failOnVersionConflict()
     }
 }
