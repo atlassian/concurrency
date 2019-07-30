@@ -18,6 +18,11 @@ The API consists of all public Kotlin types from `com.atlassian.performance.tool
 ## [Unreleased]
 [Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.0.0...master
 
+### Added
+- Add `AbruptExecutorService`. Resolve [JPERF-546].
+
+[JPERF-546]: https://ecosystem.atlassian.net/browse/JPERF-546
+
 ## [1.0.0] - 2018-08-30
 [1.0.0]: https://github.com/atlassian/concurrency/compare/release-0.0.2...release-1.0.0
 
