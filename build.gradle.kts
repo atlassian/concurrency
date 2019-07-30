@@ -1,7 +1,7 @@
-val kotlinVersion = "1.2.30"
+val kotlinVersion = "1.2.70"
 
 plugins {
-    kotlin("jvm").version("1.2.30")
+    kotlin("jvm").version("1.2.70")
     id("com.atlassian.performance.tools.gradle-release").version("0.5.0")
 }
 
@@ -13,8 +13,8 @@ configurations.all {
 }
 
 dependencies {
-    compile("com.atlassian.performance.tools:jvm-tasks:[1.0.0,2.0.0)")
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
+    implementation("com.atlassian.performance.tools:jvm-tasks:[1.0.0,2.0.0)")
+    api("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
     log4j(
         "api",
         "core",
