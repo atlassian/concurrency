@@ -21,7 +21,11 @@ The API consists of all public Kotlin types from `com.atlassian.performance.tool
 ### Added
 - Add `AbruptExecutorService`. Resolve [JPERF-546].
 
+### Fixed
+- Switch to non-deprecated Kotlin stdlib. Fix [JPERF-466].
+
 [JPERF-546]: https://ecosystem.atlassian.net/browse/JPERF-546
+[JPERF-466]: https://ecosystem.atlassian.net/browse/JPERF-466
 
 ## [1.0.0] - 2018-08-30
 [1.0.0]: https://github.com/atlassian/concurrency/compare/release-0.0.2...release-1.0.0
