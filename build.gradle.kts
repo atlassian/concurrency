@@ -1,4 +1,5 @@
 val kotlinVersion = "1.2.70"
+val log4jVersion = "2.17.1"
 
 plugins {
     kotlin("jvm").version("1.2.70")
@@ -9,6 +10,15 @@ configurations.all {
     resolutionStrategy {
         activateDependencyLocking()
         failOnVersionConflict()
+        eachDependency {
+            when (requested.module.toString()) {
+                "org.slf4j:slf4j-api" -> useVersion("1.8.0-alpha2")
+            }
+            when (requested.group) {
+                "org.apache.logging.log4j" -> useVersion(log4jVersion)
+                "org.jetbrains.kotlin" -> useVersion(kotlinVersion)
+            }
+        }
     }
 }
 
@@ -27,7 +37,7 @@ dependencies {
 fun log4j(
     vararg modules: String
 ): List<String> = modules.map { module ->
-    "org.apache.logging.log4j:log4j-$module:2.10.0"
+    "org.apache.logging.log4j:log4j-$module:$log4jVersion"
 }
 
 tasks.getByName("wrapper", Wrapper::class).apply {
