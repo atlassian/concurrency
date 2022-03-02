@@ -16,7 +16,10 @@ The API consists of all public Kotlin types from `com.atlassian.performance.tool
 [behavioral compatibility]: http://cr.openjdk.java.net/~darcy/OpenJdkDevGuide/OpenJdkDevelopersGuide.v0.777.html#behavioral_compatibility
 
 ## [Unreleased]
-[Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.1.0...master
+[Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.1.1...master
+
+## [1.1.1] - 2022-03-02
+[1.1.1]: https://github.com/atlassian/concurrency/compare/release-1.1.0...release-1.1.1
 
 ### Fixed
 - Bump log4j to `2.17.1`. Address JPERF-772.
