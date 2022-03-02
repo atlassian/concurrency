@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/atlassian/concurrency.svg?branch=master)](https://travis-ci.com/atlassian/concurrency)
+[![CI status](https://github.com/atlassian/concurrency/workflows/CI/badge.svg)](https://github.com/atlassian/concurrency/actions?query=branch%3Amaster+workflow%3ACI)
 
 ## Concurrency
 Trace concurrent tasks and terminate them gracefully.
