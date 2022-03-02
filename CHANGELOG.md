@@ -18,6 +18,11 @@ The API consists of all public Kotlin types from `com.atlassian.performance.tool
 ## [Unreleased]
 [Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.1.0...master
 
+### Fixed
+- Bump log4j to `2.17.1`. Address JPERF-772.
+
+[JPERF-772]: https://ecosystem.atlassian.net/browse/JPERF-772
+
 ## [1.1.0] - 2019-07-31
 [1.1.0]: https://github.com/atlassian/concurrency/compare/release-1.0.0...release-1.1.0
 
