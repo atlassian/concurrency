@@ -18,6 +18,9 @@ The API consists of all public Kotlin types from `com.atlassian.performance.tool
 ## [Unreleased]
 [Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.1.2...master
 
+### Added
+- Add `AbruptScheduledExecutorService`.
+
 ## [1.1.2] - 2022-06-23
 [1.1.2]: https://github.com/atlassian/concurrency/compare/release-1.1.1...release-1.1.2
 
