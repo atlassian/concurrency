@@ -1,5 +1,5 @@
 val kotlinVersion = "1.2.70"
-val log4jVersion = "2.17.1"
+val log4jVersion = "[2.6, 2.999.999]"
 
 plugins {
     kotlin("jvm").version("1.2.70")
@@ -11,6 +11,11 @@ configurations.all {
         activateDependencyLocking()
         failOnVersionConflict()
         eachDependency {
+            when (requested.module.toString()) {
+                // conflict between concurrency (this) and jvm-tasks
+                // Gradle disappoints, by not picking log4j-api:2.17.0, which matches both jvm-tasks:1.2.4 and our range
+                "org.apache.logging.log4j:log4j-api" -> useVersion(log4jVersion)
+            }
             when (requested.group) {
                 "org.jetbrains.kotlin" -> useVersion(kotlinVersion)
             }

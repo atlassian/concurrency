@@ -32,6 +32,9 @@ E.g. you can depend on `[1.3.0, 2.0.0)` and know that `log4j-core` will not come
 ### Added
 - Drop major versions of `log4j-core` and `log4j-slf4j-impl`. Fix [JPERF-570].
 
+### Fixed
+- Relax `log4j-api` dependency to a SemVer range.
+
 ## [1.2.1] - 2023-03-21
 [1.2.1]: https://github.com/atlassian/concurrency/compare/release-1.2.0...release-1.2.1
 
