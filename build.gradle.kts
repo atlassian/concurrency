@@ -11,11 +11,7 @@ configurations.all {
         activateDependencyLocking()
         failOnVersionConflict()
         eachDependency {
-            when (requested.module.toString()) {
-                "org.slf4j:slf4j-api" -> useVersion("1.8.0-alpha2")
-            }
             when (requested.group) {
-                "org.apache.logging.log4j" -> useVersion(log4jVersion)
                 "org.jetbrains.kotlin" -> useVersion(kotlinVersion)
             }
         }
