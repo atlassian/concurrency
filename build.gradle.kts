@@ -24,7 +24,7 @@ configurations.all {
 }
 
 dependencies {
-    implementation("com.atlassian.performance.tools:jvm-tasks:[1.0.0,2.0.0)")
+    implementation("com.atlassian.performance.tools:jvm-tasks:[1.4.0, 2.0.0)")
     api("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
     api("org.apache.logging.log4j:log4j-api:$log4jVersion")
     testImplementation("org.apache.logging.log4j:log4j-core:$log4jVersion")
