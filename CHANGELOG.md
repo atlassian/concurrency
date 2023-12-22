@@ -24,7 +24,10 @@ Adding a requirement of a major version of a dependency is breaking a contract.
 Dropping a requirement of a major version of a dependency is a new contract.
 
 ## [Unreleased]
-[Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.2.1...master
+[Unreleased]: https://github.com/atlassian/concurrency/compare/release-1.3.0...master
+
+## [1.3.0] - 2023-12-22
+[1.3.0]: https://github.com/atlassian/concurrency/compare/release-1.2.1...release-1.3.0
 
 This change in POM was already done in [1.2.1]. This release upgrades the change into a contract.
 E.g. you can depend on `[1.3.0, 2.0.0)` and know that `log4j-core` will not come back and cause a conflict.
